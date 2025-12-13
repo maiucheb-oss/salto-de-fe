@@ -1,123 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Acordeón fotográfico</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acordeón fotográfico</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      background: #ffffff;
-      overflow: hidden;
-    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
+      overflow: hidden;
+    }
 
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
 
-    .viewport {
-      width: 100vw;
-      height: 100vh;
-      overflow-x: auto;
-      overflow-y: hidden;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-    }
+    .viewport {
+      width: 100vw;
+      height: 100vh;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
 
-    .track {
-      display: flex;
-      align-items: center;
-      height: 100%;
-      gap: 12px;
-      padding: 12px;
-    }
+    .track {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      gap: 0;      /* CORREGIDO: SE ELIMINA LA SEPARACIÓN HORIZONTAL */
+      padding: 0;  /* CORREGIDO: SE ELIMINA EL ESPACIO ALREDEDOR DE LA GALERÍA */
+    }
 
-    .track img {
-      height: calc(100vh - 24px);
-      width: auto;
-      flex-shrink: 0;
-      object-fit: contain;
-      scroll-snap-align: start;
-    }
+    .track img {
+      height: 100vh; /* Ajustado para ocupar la altura completa sin el padding */
+      width: auto;
+      flex-shrink: 0;
+      object-fit: contain;
+      scroll-snap-align: start;
+    }
 
-    .hint {
-      position: fixed;
-      bottom: 14px;
-      right: 18px;
-      font-size: 12px;
-      color: #999;
-      letter-spacing: 0.04em;
-      user-select: none;
-      pointer-events: none;
-    }
-  </style>
+    .hint {
+      position: fixed;
+      bottom: 14px;
+      right: 18px;
+      font-size: 12px;
+      color: #999;
+      letter-spacing: 0.04em;
+      user-select: none;
+      pointer-events: none;
+    }
+  </style>
 </head>
 <body>
 
-  <div class="viewport">
-    <div class="track">
-      <img src="foto-01.jpg" alt="" />
-      <img src="foto-02.jpg" alt="" />
-      <img src="foto-03.jpg" alt="" />
-      <img src="foto-04.jpg" alt="" />
-      <img src="foto-05.jpg" alt="" />
-      <img src="foto-06.jpg" alt="" />
-      <img src="foto-07.jpg" alt="" />
-      <img src="foto-08.jpg" alt="" />
-      <img src="foto-09.jpg" alt="" />
-      <img src="foto-10.jpg" alt="" />
-      <img src="foto-11.jpg" alt="" />
-      <img src="foto-12.jpg" alt="" />
-      <img src="foto-13.jpg" alt="" />
-      <img src="foto-14.jpg" alt="" />
-      <img src="foto-15.jpg" alt="" />
-      <img src="foto-16.jpg" alt="" />
-      <img src="foto-17.jpg" alt="" />
-      <img src="foto-18.jpg" alt="" />
-      <img src="foto-19.jpg" alt="" />
-      <img src="foto-20.jpg" alt="" />
-      <img src="foto-21.jpg" alt="" />
-      <img src="foto-22.jpg" alt="" />
-      <img src="foto-23.jpg" alt="" />
-      <img src="foto-24.jpg" alt="" />
-      <img src="foto-25.jpg" alt="" />
-      <img src="foto-26.jpg" alt="" />
-      <img src="foto-27.jpg" alt="" />
-      <img src="foto-28.jpg" alt="" />
-      <img src="foto-29.jpg" alt="" />
-      <img src="foto-30.jpg" alt="" />
-      <img src="foto-31.jpg" alt="" />
-      <img src="foto-32.jpg" alt="" />
-      <img src="foto-33.jpg" alt="" />
-      <img src="foto-34.jpg" alt="" />
-      <img src="foto-35.jpg" alt="" />
-      <img src="foto-36.jpg" alt="" />
-      <img src="foto-37.jpg" alt="" />
-      <img src="foto-38.jpg" alt="" />
-      <img src="foto-39.jpg" alt="" />
-      <img src="foto-40.jpg" alt="" />
-      <img src="foto-41.jpg" alt="" />
-      <img src="foto-42.jpg" alt="" />
-      <img src="foto-43.jpg" alt="" />
-      <img src="foto-44.jpg" alt="" />
-      <img src="foto-45.jpg" alt="" />
-      <img src="foto-46.jpg" alt="" />
-      <img src="foto-47.jpg" alt="" />
-      <img src="foto-48.jpg" alt="" />
-      <img src="foto-49.jpg" alt="" />
-      <img src="foto-50.jpg" alt="" />
-    </div>
-  </div>
+  <div class="viewport">
+    <div class="track">
+      <img src="foto-01.jpg" alt="" />
+      <img src="foto-02.jpg" alt="" />
+      <img src="foto-03.jpg" alt="" />
+      <img src="foto-04.jpg" alt="" />
+      <img src="foto-05.jpg" alt="" />
+      <img src="foto-06.jpg" alt="" />
+      <img src="foto-07.jpg" alt="" />
+      <img src="foto-08.jpg" alt="" />
+      <img src="foto-09.jpg" alt="" />
+      <img src="foto-10.jpg" alt="" />
+      <img src="foto-11.jpg" alt="" />
+      <img src="foto-12.jpg" alt="" />
+      <img src="foto-13.jpg" alt="" />
+      <img src="foto-14.jpg" alt="" />
+      <img src="foto-15.jpg" alt="" />
+      <img src="foto-16.jpg" alt="" />
+      <img src="foto-17.jpg" alt="" />
+      <img src="foto-18.jpg" alt="" />
+      <img src="foto-19.jpg" alt="" />
+      <img src="foto-20.jpg" alt="" />
+      <img src="foto-21.jpg" alt="" />
+      <img src="foto-22.jpg" alt="" />
+      <img src="foto-23.jpg" alt="" />
+      <img src="foto-24.jpg" alt="" />
+      <img src="foto-25.jpg" alt="" />
+      <img src="foto-26.jpg" alt="" />
+      <img src="foto-27.jpg" alt="" />
+      <img src="foto-28.jpg" alt="" />
+      <img src="foto-29.jpg" alt="" />
+      <img src="foto-30.jpg" alt="" />
+      <img src="foto-31.jpg" alt="" />
+      <img src="foto-32.jpg" alt="" />
+      <img src="foto-33.jpg" alt="" />
+      <img src="foto-34.jpg" alt="" />
+      <img src="foto-35.jpg" alt="" />
+      <img src="foto-36.jpg" alt="" />
+      <img src="foto-37.jpg" alt="" />
+      <img src="foto-38.jpg" alt="" />
+      <img src="foto-39.jpg" alt="" />
+      <img src="foto-40.jpg" alt="" />
+      <img src="foto-41.jpg" alt="" />
+      <img src="foto-42.jpg" alt="" />
+      <img src="foto-43.jpg" alt="" />
+      <img src="foto-44.jpg" alt="" />
+      <img src="foto-45.jpg" alt="" />
+      <img src="foto-46.jpg" alt="" />
+      <img src="foto-47.jpg" alt="" />
+      <img src="foto-48.jpg" alt="" />
+      <img src="foto-49.jpg" alt="" />
+      <img src="foto-50.jpg" alt="" />
+    </div>
+  </div>
 
-  <div class="hint">deslizar →</div>
+  <div class="hint">deslizar →</div>
 
 </body>
 </html>
-<!-- redeploy -->
