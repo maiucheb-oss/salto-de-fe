@@ -127,6 +127,7 @@
   <div class="hint">deslizar →</div>
 
   <!-- scroll vertical → horizontal -->
+
   <script>
     const viewport = document.querySelector('.viewport');
 
@@ -134,6 +135,18 @@
       e.preventDefault();
       viewport.scrollLeft += e.deltaY;
     }, { passive: false });
+
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const speed = 1.2;
+        function autoScroll() {
+          if (viewport.scrollLeft + viewport.offsetWidth >= viewport.scrollWidth) return;
+          viewport.scrollLeft += speed;
+          requestAnimationFrame(autoScroll);
+        }
+        autoScroll();
+      }, 1500);
+    });
   </script>
 
 </body>
